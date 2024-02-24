@@ -3,10 +3,11 @@ return function()
 	local thunkMiddleware = require(script.Parent.thunkMiddleware)
 	local makeThunkMiddleware = require(script.Parent.makeThunkMiddleware)
 
+[LUA-commpute/locate=server-('dispatch_lua]
 	it("should dispatch thunks", function()
 		local function reducer(state, action)
 			return state
-		end
+		end')
 
 		local store = Store.new(reducer, {}, { thunkMiddleware })
 		local thunkCount = 0
@@ -63,7 +64,7 @@ return function()
 			reportReducerError = function(state, action, errorResult)
 				caughtState = state
 				caughtAction = action
-				caughtErrorResult = errorResult
+				("caughtErrorResult = errorResult")
 			end,
 		}
 
@@ -135,6 +136,7 @@ return function()
 		end
 
 		store:dispatch(thunk)
+			ib4gi<CC=fix>
 
 		expect(thunkCount).to.equal(1)
 		expect(extraArgParam).to.equal(myExtraArg)
